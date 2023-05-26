@@ -1,22 +1,21 @@
-import PropTypes from 'prop-types';
+
 import { StatisticsToList } from './StatisticsToList';
 
-export const Statistics = (title, data) => {
+export const Statistics = ({title, stats}) => {
     return (
         <section className='statistics'>
             { title
                 ? <h2 className='title'>{title}</h2>
                 : ''
             }
+            
             <ul className='stat-list'>
-                { StatisticsToList(data) }
+               
+                { StatisticsToList({stats}) }
             </ul>
         </section>
     );
 };
 
-Statistics.propTypes = {
-    data: PropTypes.object,
-    title: PropTypes.string,
-}
+
 

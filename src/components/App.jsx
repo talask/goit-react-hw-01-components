@@ -1,5 +1,6 @@
+import PropTypes from 'prop-types';
 import { Profile } from './Profile/Profile';
-import { Friendlist } from './Friendlist/FriendList'
+import { FriendList } from './Friendlist/FriendList'
 import { TransactionHistory } from './TransactionHistory/TransactionHistory'
 import { Statistics } from './Statistics/Statistics';
 import user from'./user.json';
@@ -24,15 +25,22 @@ export const App = () => {
         stats={data} 
       />
 
-      <Friendlist 
-        friends={friends} 
+      <FriendList 
+      friends={friends} 
       />
-
+      
       <TransactionHistory 
         items={transactions} 
       />
     </>
   )
 }
-console.log(App);
+//console.log(App);
+Statistics.propTypes = {
+  stats: PropTypes.array,
+  title: PropTypes.string,
+}
 
+FriendList.propTypes = {
+  friends:  PropTypes.array,
+}

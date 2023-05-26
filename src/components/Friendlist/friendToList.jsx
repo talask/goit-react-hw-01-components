@@ -1,4 +1,5 @@
 export function friendToList({friends}) {
+   
     return friends.map(({id, isOnline, avatar, name}) => {
         return (
             <li className="item" key={id}>

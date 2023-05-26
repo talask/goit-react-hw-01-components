@@ -1,15 +1,12 @@
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import { friendToList } from './friendToList'
 
-export const Friendlist = (friends) => {
+export const FriendList = ({friends}) => {
     return (
         <ul className="friend-list">
-            {friendToList(friends)}
+            {friendToList({friends})}
         </ul>
     )
 }
 
 
-Friendlist.propTypes = {
-    friends:  PropTypes.object
-}
