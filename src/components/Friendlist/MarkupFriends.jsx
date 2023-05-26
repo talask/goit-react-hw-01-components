@@ -1,4 +1,4 @@
-export function friendToList({friends}) {
+ export const MarkupFriends = ({friends}) => {
    
     return friends.map(({id, isOnline, avatar, name}) => {
         return (
@@ -9,4 +9,6 @@ export function friendToList({friends}) {
             </li>
         )
     })
+
 }
+

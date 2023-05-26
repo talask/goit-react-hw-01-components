@@ -1,10 +1,10 @@
-//import PropTypes from 'prop-types';
-import { friendToList } from './friendToList'
+
+import { MarkupFriends } from './MarkupFriends'
 
 export const FriendList = ({friends}) => {
     return (
         <ul className="friend-list">
-            {friendToList({friends})}
+            <MarkupFriends friends={friends} />
         </ul>
     )
 }

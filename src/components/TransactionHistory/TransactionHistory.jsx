@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { itemsToTd } from './itemsToTd';
+import { MarkupTransactionHistory } from './MarkupTransactionHistory';
 
 export const TransactionHistory = ({items}) => {
     return (
@@ -14,7 +14,7 @@ export const TransactionHistory = ({items}) => {
                 </tr>
             </thead>
             <tbody>
-                {itemsToTd(items)}
+                <MarkupTransactionHistory items={items} />
             </tbody>
         </table>
     )

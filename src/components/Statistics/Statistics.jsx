@@ -1,18 +1,15 @@
-
-import { StatisticsToList } from './StatisticsToList';
+import { TitleStatistic } from './TitleStatistic';
+import { MarkupStatistics } from './MarkupStatistics';
 
 export const Statistics = ({title, stats}) => {
     return (
         <section className='statistics'>
-            { title
-                ? <h2 className='title'>{title}</h2>
-                : ''
-            }
+            <TitleStatistic title={title} />
             
-            <ul className='stat-list'>
-               
-                { StatisticsToList({stats}) }
+            <ul className='stat-list'> 
+                <MarkupStatistics stats={stats} />
             </ul>
+            
         </section>
     );
 };

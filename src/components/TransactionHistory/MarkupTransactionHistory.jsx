@@ -1,4 +1,4 @@
-export function itemsToTd(items) {
+export const MarkupTransactionHistory = ({items}) => {
     return items.map(({id, type, amount, currency}) => {
         return (
             <tr key={id}>

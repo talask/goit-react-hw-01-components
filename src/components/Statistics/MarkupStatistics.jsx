@@ -1,4 +1,4 @@
-export function StatisticsToList({stats}) {
+export const MarkupStatistics = ({stats}) => {
     
     return ( stats.map(({id, label, percentage}) =>  {
        
