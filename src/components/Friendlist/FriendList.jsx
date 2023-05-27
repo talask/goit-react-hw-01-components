@@ -1,11 +1,11 @@
-
-import { MarkupFriends } from './MarkupFriends'
+import { MarkupFriends } from './MarkupFriends';
+import { ListFriends } from './FriendList.styled';
 
 export const FriendList = ({friends}) => {
     return (
-        <ul className="friend-list">
+        <ListFriends>
             <MarkupFriends friends={friends} />
-        </ul>
+        </ListFriends>
     )
 }
 

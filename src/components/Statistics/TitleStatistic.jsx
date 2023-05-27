@@ -1,5 +1,6 @@
+import { TitleH2 } from './Statistics.styled';
 export const TitleStatistic = ({title}) => { 
     return title
-    ? <h2 className='title'>{title}</h2>
+    ? <TitleH2>{title}</TitleH2>
     : ''
 }

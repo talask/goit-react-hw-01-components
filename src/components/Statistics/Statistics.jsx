@@ -1,16 +1,18 @@
 import { TitleStatistic } from './TitleStatistic';
 import { MarkupStatistics } from './MarkupStatistics';
 
+import { SectionStatistic, ListStatistics } from './Statistics.styled'
+
 export const Statistics = ({title, stats}) => {
     return (
-        <section className='statistics'>
+        <SectionStatistic>
             <TitleStatistic title={title} />
             
-            <ul className='stat-list'> 
+            <ListStatistics> 
                 <MarkupStatistics stats={stats} />
-            </ul>
+            </ListStatistics>
             
-        </section>
+        </SectionStatistic>
     );
 };
 

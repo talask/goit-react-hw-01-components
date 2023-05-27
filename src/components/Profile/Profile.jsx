@@ -1,30 +1,34 @@
+import { DivProfile, Description, Photo, TitleName, ListStats, ItemStats,SpanQualityStats } from './Profile.styled';
 export const Profile = ({ username, tag, location, avatar, stats }) => {
-    return (<div className="profile">
-        <div className="description">
-            <img
+    return (
+    <DivProfile>
+        <Description>
+            <Photo
                 src={avatar}
                 alt="User avatar"
-                className="avatar" />
-            <p className="name">{username}</p>
+                className="avatar" 
+            >
+            </Photo>
+            <TitleName>{username}</TitleName>
             <p className="tag">{tag}</p>
             <p className="location">{location}</p>
-        </div>
+        </Description>
 
-        <ul className="stats">
-            <li>
+        <ListStats>
+            <ItemStats>
                 <span className="label">Followers</span>
-                <span className="quantity">{stats.followers}</span>
-            </li>
-            <li>
+                <SpanQualityStats>{stats.followers}</SpanQualityStats>
+            </ItemStats>
+            <ItemStats>
                 <span className="label">Views</span>
-                <span className="quantity">{stats.views}</span>
-            </li>
-            <li>
+                <SpanQualityStats>{stats.views}</SpanQualityStats>
+            </ItemStats>
+            <ItemStats>
                 <span className="label">Likes</span>
-                <span className="quantity">{stats.likes}</span>
-            </li>
-        </ul>
-    </div>
+                <SpanQualityStats>{stats.likes}</SpanQualityStats>
+            </ItemStats>
+        </ListStats>
+    </DivProfile>
     
     )
 }

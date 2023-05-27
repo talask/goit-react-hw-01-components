@@ -1,12 +1,20 @@
+import { ItemStatistics, PercentageStatistics } from './Statistics.styled';
+import { whichColor } from './wichColor';
+
 export const MarkupStatistics = ({stats}) => {
+    let countArr = stats.length;
     
-    return ( stats.map(({id, label, percentage}) =>  {
-       
+    return ( stats.map(({ id, label, percentage }) =>  {
+        let color = whichColor(label);
         return (
-            <li key={id} className='item'>
-                <span className='label'>{label}</span>
-                <span className='percentage'>{percentage}</span>
-            </li>
+            <ItemStatistics 
+                key={id} 
+                color={color} 
+                count={countArr}
+            >
+                <span className='label'> {label} </span>
+                <PercentageStatistics> {percentage}</PercentageStatistics>
+            </ItemStatistics>
         )
 })
     )

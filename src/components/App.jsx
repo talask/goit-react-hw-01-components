@@ -26,7 +26,7 @@ export const App = () => {
       />
 
       <FriendList 
-      friends={friends} 
+        friends={friends} 
       />
       
       <TransactionHistory 
@@ -35,7 +35,7 @@ export const App = () => {
     </>
   )
 }
-//console.log(App);
+
 Statistics.propTypes = {
   stats: PropTypes.array,
   title: PropTypes.string,
@@ -43,4 +43,16 @@ Statistics.propTypes = {
 
 FriendList.propTypes = {
   friends:  PropTypes.array,
+}
+
+TransactionHistory.propTypes = {
+  items:  PropTypes.array,
+}
+
+Profile.propTypes = {
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  stats: PropTypes.object, 
 }
