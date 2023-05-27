@@ -13,7 +13,7 @@ export const MarkupStatistics = ({stats}) => {
                 count={countArr}
             >
                 <span className='label'> {label} </span>
-                <PercentageStatistics> {percentage}</PercentageStatistics>
+                <PercentageStatistics> {percentage}%</PercentageStatistics>
             </ItemStatistics>
         )
 })
