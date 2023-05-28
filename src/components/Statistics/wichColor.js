@@ -1,4 +1,4 @@
-export function whichColor (label) {
+export function whichColor(label) {
     let color = 'green';
     switch(label) {
         case '.docx': 

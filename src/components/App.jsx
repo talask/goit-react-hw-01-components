@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { Profile } from './Profile/Profile';
 import { FriendList } from './Friendlist/FriendList'
 import { TransactionHistory } from './TransactionHistory/TransactionHistory'
@@ -36,23 +35,10 @@ export const App = () => {
   )
 }
 
-Statistics.propTypes = {
-  stats: PropTypes.array,
-  title: PropTypes.string,
-}
 
-FriendList.propTypes = {
-  friends:  PropTypes.array,
-}
 
-TransactionHistory.propTypes = {
-  items:  PropTypes.array,
-}
 
-Profile.propTypes = {
-  username: PropTypes.string,
-  tag: PropTypes.string,
-  location: PropTypes.string,
-  avatar: PropTypes.string,
-  stats: PropTypes.object, 
-}
+
+
+
+

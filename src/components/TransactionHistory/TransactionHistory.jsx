@@ -1,4 +1,4 @@
-import { MarkupTransactionHistory } from './MarkupTransactionHistory';
+import PropTypes from 'prop-types';
 import { TableTransactionHistory } from './TransactionHistory.styled';
 
 export const TransactionHistory = ({items}) => {
@@ -12,9 +12,27 @@ export const TransactionHistory = ({items}) => {
                 </tr>
             </thead>
             <tbody>
-                <MarkupTransactionHistory items={items} />
+                { items.map(({id, type, amount, currency}) => {
+                    return (
+                        <tr key={id}>
+                            <td>{type}</td>
+                            <td>{amount}</td>
+                            <td>{currency}</td>
+                        </tr>
+                    )
+                } )}
+                
             </tbody>
         </TableTransactionHistory>
     )
     }
+
+    TransactionHistory.propTypes = {
+        items: {
+            id: PropTypes.string, 
+            type: PropTypes.string, 
+            amount: PropTypes.string, 
+            currency: PropTypes.string,
+        }
+      }
     
