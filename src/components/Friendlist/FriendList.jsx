@@ -1,18 +1,28 @@
 import PropTypes from 'prop-types';
-import { MarkupFriendlist } from './MarkupFriendlist';
+import { FrendListItem } from './FrendListItem';
 import { ListFriends } from './FriendList.styled';
 
 export const FriendList = ({friends}) => {
     return (
         <ListFriends>
-            <MarkupFriendlist friends={ friends } />
+            { friends.map(({id, isOnline, avatar, name}) => 
+                <FrendListItem id={id} isOnline={isOnline} avatar={avatar} name={name} />
+            )
+            }
+            
         </ListFriends>
     )
 }
 
 FriendList.propTypes = {
-    friends: PropTypes.array
-     }
- 
+    
+    friends:  {
+        id: PropTypes.number, 
+        isOnline: PropTypes.bool, 
+        avatar: PropTypes.string, 
+        name: PropTypes.string,
+    }
+    
+}
 
 

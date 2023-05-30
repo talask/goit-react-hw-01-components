@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import { TitleH2 } from './Statistics.styled';
-import { ItemStatistics, PercentageStatistics } from './Statistics.styled';
+
 import { whichColor } from './wichColor';
+import { StatisticItem } from './StatisticItem'
 
 import { SectionStatistic, ListStatistics } from './Statistics.styled'
 
@@ -14,21 +15,20 @@ export const Statistics = ({title, stats}) => {
             <ListStatistics> 
                 { stats.map(({ id, label, percentage }) =>  {
                     let color = whichColor(label);
-                     return (
-                        <ItemStatistics 
-                            key={id} 
-                            color={color} 
-                            count={countArr}
-                        >
-                            <span className='label'> {label} </span>
-                            <PercentageStatistics> {percentage}%</PercentageStatistics>
-                        </ItemStatistics>
+                    return (
+                        <StatisticItem 
+                            id={id} 
+                            label={label} 
+                            percentage={percentage} 
+                            countArr={countArr}
+                            color={color}
+                        />
                     )
                 }) }
             </ListStatistics>
             
         </SectionStatistic>
-    );
+    )
 };
 
 Statistics.propTypes = {
